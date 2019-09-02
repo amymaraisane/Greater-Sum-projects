@@ -4,13 +4,14 @@ const phoneNumChecker = (number)=>{
         return false;  
     }
     if(number.length >=10){
-        let nonNumeric = numArr.filter(i=> /\D/.test(i))
-        if (nonNumeric.length > 0){
+        let noSpaces = number.replace(/\s+/g, "")
+        noSpaces = noSpaces.split("").filter(i=> /\D/.test(i))
+        if (noSpaces.length > 0){
             return false;
         }
     }
     if(number.length === 12){
-        if (numArr[3] !== " " || numArr[7] !== " "){
+        if ((numArr[3] !== " ") || (numArr[7] !== " ")){
             debugger;
             return false
         }
