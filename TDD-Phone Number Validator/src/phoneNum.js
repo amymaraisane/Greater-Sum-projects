@@ -4,7 +4,7 @@ const phoneNumChecker = (number)=>{
         return result
     }
     if (number.length === 12){
-        let result = /[0-9]{3}[\s][0-9]{3}[\s][0-9]{4}/.test(number)
+        let result = /[0-9]{3}[\s-][0-9]{3}[\s-][0-9]{4}/.test(number)
         debugger;
         return result
     }
