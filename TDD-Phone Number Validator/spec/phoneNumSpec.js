@@ -15,6 +15,8 @@ describe('Phone Number Validator', () => {
     })
     it('can have parens around area code then space or dash after 2nd and 3rd number groups', ()=>{
         expect(phoneNumChecker('(222) 222 2222')).toBe(true)
+    })
+    it('can have parens around area code then space or dash after 2nd and 3rd number groups', ()=>{
         expect(phoneNumChecker('(222)2222222')).toBe(true)
     })
 });
