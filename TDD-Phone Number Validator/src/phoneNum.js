@@ -15,3 +15,4 @@ const phoneNumChecker = (number)=>{
 //otherwise ( signals the start of a capturing (can be used to extract data) or noncapturing group
 
 //must adjust number.length to >= 12
+   
