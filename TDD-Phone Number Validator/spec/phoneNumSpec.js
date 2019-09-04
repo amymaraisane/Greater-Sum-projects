@@ -13,11 +13,10 @@ describe('Phone Number Validator', () => {
     it('can include a dash after 3rd number and 6th number', ()=>{
         expect(phoneNumChecker('222-222-2222')).toBe(true)
     })
-    it('can have parens around area code then no spaces', ()=>{
+    it('can have parens around area code then spaces btw 3rd and 6th numbers', ()=>{
         expect(phoneNumChecker('(222) 222 2222')).toBe(true)
     })
 });
-
 
 // expect(phoneNumChecker('(222)222-2222')).toBe(true)
 // expect(phoneNumChecker('(222) 222 2222')).toBe(true)
