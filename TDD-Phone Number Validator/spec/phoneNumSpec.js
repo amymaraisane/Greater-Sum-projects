@@ -13,12 +13,12 @@ describe('Phone Number Validator', () => {
     it('can include a dash after 3rd number and 6th number', ()=>{
         expect(phoneNumChecker('222-222-2222')).toBe(true)
     })
-    // it('can have parens around area code then no space', ()=>{
-    //     expect(phoneNumChecker('(222)222-2222')).toBe(true)
-    //     expect(phoneNumChecker('(222) 222 2222')).toBe(true)
-    //     expect(phoneNumChecker('(222)222 2222')).toBe(false)
-    //     expect(phoneNumChecker('(222)2222222')).toBe(false)
-    // })
+    it('can have parens around area code then no spaces', ()=>{
+        expect(phoneNumChecker('(222) 222 2222')).toBe(true)
+    })
 });
 
 
+// expect(phoneNumChecker('(222)222-2222')).toBe(true)
+// expect(phoneNumChecker('(222) 222 2222')).toBe(true)
+// expect(phoneNumChecker('(222)222 2222')).toBe(false)
