@@ -16,6 +16,7 @@ describe('Phone Number Validator', () => {
     it('can have parens around area code then space or dash after 2nd and 3rd number groups', ()=>{
         expect(phoneNumChecker('(222) 222 2222')).toBe(true)
         expect(phoneNumChecker('(222)-222-2222')).toBe(true)
+        expect(phoneNumChecker('(222)222-2222')).toBe(true)
     })
     it('can have parens around area code then no spaces/dashes', ()=>{
         expect(phoneNumChecker('(222)2222222')).toBe(true)
@@ -23,7 +24,16 @@ describe('Phone Number Validator', () => {
     it('cannot have only one spaces or dash', ()=>{
         expect(phoneNumChecker('222-2222222')).toBe(false)
     })
+
+    it('cannot have exta spaces or dashes', ()=>{
+        expect(phoneNumChecker('222 222  2222')).toBe(false)
+    })
 });
 
-// expect(phoneNumChecker('(222)222-2222')).toBe(true)
+
 // expect(phoneNumChecker('(222)222 2222')).toBe(false)
+
+
+// 222) 222-2222  should be false    
+// (222)-222 2222   should be false
+// (222)-222-2222   should be false
