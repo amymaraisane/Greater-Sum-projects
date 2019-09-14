@@ -1,3 +1,6 @@
+const phoneNumChecker = require ('./helpers/src/phoneNum');
+
+
 describe('Phone Number', () => {
     it('must have 10 values present', ()=>{
         expect(phoneNumChecker('1234567890')).toBe(true)
