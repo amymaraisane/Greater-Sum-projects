@@ -14,12 +14,12 @@ describe('Phone Number Validator', () => {
     //      expect(phoneNumChecker('123-456-7890')).toBe(true)
     //      expect(phoneNumChecker('12-34-56-890')).toBe(false)
     // })
-    // it('can have parens around area code followed by a space', ()=>{
-    //     expect(phoneNumChecker('(222) 222 2222')).toBe(true)
-    // })
     // it('can have parens around area code followed by no space' , ()=>{
     //     expect(phoneNumChecker('(222)222-2222')).toBe(true)
     // })
+    //it('can have parens around area code followed by a space', ()=>{
+    //     expect(phoneNumChecker('(222) 222 2222')).toBe(true)
+    // }) 
 });
 
 
