@@ -1,9 +1,7 @@
 const phoneNumChecker = (num) =>{
-    if(isNaN(Number(num))){
-        return false
-    }
-    else if (num.length === 10){
-        return true
+    if (num.length ===10) {
+        let result = /[0-9]{10}/.test(num)
+        return result
     }
     return false
 }
