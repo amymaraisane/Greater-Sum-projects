@@ -1,11 +1,11 @@
-describe('Phone Number Validator', () => {
-    // it('checks for 10 values present', ()=>{
-    //     expect(phoneNumChecker('1234567890')).toBe(true)
-    //     expect(phoneNumChecker('12345678')).toBe(false)
-    // })
-    // it('checks that each value is a number', ()=>{
-    //     expect(phoneNumChecker('123#*67890')).toBe(false)
-    // })
+describe('Phone Number', () => {
+    it('must have 10 values present', ()=>{
+        expect(phoneNumChecker('1234567890')).toBe(true)
+        expect(phoneNumChecker('12345678')).toBe(false)
+    })
+    it('must have only number values', ()=>{
+        expect(phoneNumChecker('123#*67890')).toBe(false)
+    })
     // it('can include one space after area code and before 3rd number group', ()=>{
     //     expect(phoneNumChecker('123 456 7890')).toBe(true)
     //     expect(phoneNumChecker('1234 5678   90')).toBe(false)
